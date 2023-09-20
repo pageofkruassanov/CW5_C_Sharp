@@ -15,11 +15,29 @@ namespace CW5_C_Sharp
         }
         public void WithdrawMoney(double money)
         {
-            bankAccount.Withdraw(money);
+            try
+            {
+                bankAccount.Withdraw(money);
+            }
+            catch(InsufficientFundsException ex) 
+            {
+                Console.WriteLine(ex.Message());
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
         public void DepositMoney(double money) 
         {
-            bankAccount.Deposit(money);
+            try
+            {
+                bankAccount.Deposit(money);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

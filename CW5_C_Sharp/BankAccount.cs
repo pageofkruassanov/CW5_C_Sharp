@@ -9,9 +9,9 @@ namespace CW5_C_Sharp
     internal class BankAccount
     {
         private double _cash;
-        public BankAccount(double cash)
+        public BankAccount()
         {
-            _cash = cash;
+            _cash = 0;
         }
         public void Deposit(double cash)
         {

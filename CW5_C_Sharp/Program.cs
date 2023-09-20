@@ -10,21 +10,12 @@ namespace CW5_C_Sharp
     {
         static void Main(string[] args)
         {
-            BankAccount firstAccount = new BankAccount((double)1000.2);
+            BankAccount firstAccount = new BankAccount();
             ATM mainAtm = new ATM(firstAccount);
-            try
-            {
-                mainAtm.WithdrawMoney((double)1100);
-            }
-            catch(InsufficientFundsException ex)
-            {
-                Console.WriteLine(ex.Message());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            mainAtm.DepositMoney((double)300);
+            mainAtm.WithdrawMoney((double)300.1);
             Console.ReadLine();
+
         }
     }
 }
