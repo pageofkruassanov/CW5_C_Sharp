@@ -21,7 +21,7 @@ namespace CW5_C_Sharp
             }
             catch(InsufficientFundsException ex) 
             {
-                Console.WriteLine(ex.Message());
+                Console.WriteLine(ex.Message);
             }
             catch (Exception ex) 
             {
